@@ -2,7 +2,7 @@
 
 This repository showcases the source code associated with my master's thesis at the Ecole nationale des chartes in Paris. Its primary goal is to explore a prestigious collection of bulletins from the Society of Study in Indochina, containing over 1000 articles gathered between 1880 and 1975.
 
-The source code includes a Python file for extracting textual data from images using the Kraken OCR, as well as a Python script for preprocessing and formatting the corpus data into JSON format. We leverage Jupyter Notebook for text processing and various techniques in corpus exploration.
+The source code includes a Python file **kraken_code.py** for extracting textual data from images using the Kraken OCR, as well as a Python script for preprocessing and formatting the corpus **collection_data.py** into JSON format. We leverage Jupyter Notebook for text processing and various techniques in corpus exploration.
 
 The primary work is organized into separate files:
 
