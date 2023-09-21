@@ -14,6 +14,8 @@ The primary work is organized into separate files:
 
 4. **word2vec.ipynb**: Here, we train a Word2Vec model to generate a set of keywords related to specific themes. These keywords are then combined with a Top2Vec model to identify related documents. The results are visualized for discussion.
 
+5. **LDA.ipynb**: This notebook implements a Latent Dirichlet Allocation (LDA) topic modeling over our corpus. The result is used for comparing the modeling efficiency against Top2Vec model.
+
 In summary, this repository contains the source code and notebooks used for exploring and analyzing the valuable collection of Indochina bulletins, offering insights into the content and topics covered during the period from 1880 to 1975.
 
 The workflow of the technique implementation is presented in the following image :
