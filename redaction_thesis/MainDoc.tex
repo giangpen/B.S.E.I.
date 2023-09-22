@@ -1,0 +1,170 @@
+\documentclass[a4paper, twoside, 12pt]{book}
+
+\usepackage[greek, french]{babel}
+%--------------------------
+% INPUTENC (encodage du texte)
+% FONTENC (positionnement des accents)
+%--------------------------
+\usepackage[utf8]{inputenc}
+
+%\usepackage{ae,lmodern}
+\usepackage[T1]{fontenc}
+
+\usepackage{longtable}
+
+% Interligne
+\usepackage{setspace}
+
+\usepackage{caption}
+\captionsetup[figure]{skip=0pt} % Adjust the skip value as needed
+% \setlength{\belowcaptionskip}{-10pt}
+% \captionsetup{belowskip=0pt}
+
+\usepackage{subcaption}
+\captionsetup{compatibility=false}
+
+% \usepackage{listingsutf8}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+% https://www.overleaf.com/project/64fdccb829d0fef659e73bd6
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  literate= {é}{{\'e}}1 {ê}{{\^e}}1  {è}{{`e}}1 {ô}{{\^o}}1 {à}{{`a}}1  {ã}{{~a}}1
+  % tabsize=3
+  }
+  
+%Pour gérer caractères spéciaux °
+\DeclareUnicodeCharacter{00B0}{ }
+%Pour les épigraphes
+\usepackage{epigraph}
+\setlength{\epigraphrule}{0pt}
+\setlength{\epigraphwidth}{0.6\textwidth}
+ \renewcommand\textflush{flushepinormal}
+ \renewenvironment{flushepinormal}{}{\vspace*{-\baselineskip}}
+\usepackage{booktabs} % Required for better table rules
+% Title page details: 
+%--------------------------
+% HYPERREF (liens hypertextes et métadonnées)
+%--------------------------
+\usepackage{hyperref}
+\hypersetup{%
+colorlinks=true,
+linkcolor=black,
+urlcolor=blue,
+citecolor=black
+}
+
+\title{Mémoire de Master 2}
+\author{Jean Barré}
+
+%--------------------------
+% TOCBIBIND (ajouter la bibliographie dans la Table des matières)
+%--------------------------
+%\usepackage{tocbibind}
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+%--------------------------
+% Éléments de mise en page (marge de 2,5 cm, alinéa en début de paragraphe 1cm, interligne 1,5)
+%--------------------------
+\usepackage[a4paper, margin=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\setlength{\parindent}{1cm}
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{28pt}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{\nouppercase{\rightmark}}
+\fancyhead[RE]{\nouppercase{\leftmark}}
+\renewcommand{\headrulewidth}{0pt}
+
+%--------------------------
+% Modules pour gérer les listes
+%--------------------------
+\usepackage{enumerate}
+\usepackage{enumitem}
+
+
+%--------------------------
+% BIBLIOGRAPHIE
+%--------------------------
+\usepackage[backend=biber, sorting=nyt, style=enc]{biblatex}
+\usepackage[autostyle]{csquotes}
+
+%\bibliography{mybibliography.bib}
+
+\addbibresource{biblio/biblio_temp_lit.bib}
+
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{2}
+
+\usepackage[official]{eurosym}
+\usepackage{afterpage}
+\usepackage{booktabs,xltabular}
+%--------------------------
+% FIGURES
+%--------------------------
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{float}
+
+% ============================================
+
+\begin{document}
+
+\frontmatter
+\include{front/titlepage}
+\include{front/abstract}
+\include{front/thanks}
+
+% table des matières
+\addcontentsline{toc}{chapter}{Table des matières}
+\tableofcontents
+
+\mainmatter
+
+\include{main/introduction}
+\include{main/partie1}
+\include{main/partie2}
+\include{main/partie3}
+\include{main/conclusion}
+
+
+% annexes
+\include{back/appendix}
+\backmatter
+
+\addcontentsline{toc}{chapter}{Bibliographie}
+%\nocite{*}
+\printbibliography
+
+% glossaire
+%\include{back/glossaire}
+
+% Liste des figures
+\listoffigures
+% table des tableaux
+\listoftables
+
+
+\end{document}
