@@ -16,7 +16,7 @@ The primary work is organized into separate files:
 
 5. **LDA.ipynb**: This notebook implements a Latent Dirichlet Allocation (LDA) topic modeling over our corpus. The result is used for comparing the modeling efficiency against Top2Vec model.
 
-In summary, this repository contains the source code and notebooks used for exploring and analyzing the valuable collection of Indochina bulletins, offering insights into the content and topics covered during the period from 1880 to 1975.
+In summary, this repository contains the source code and notebooks used for exploring and analyzing the valuable collection of Indochina bulletins, offering insights into the content and topics covered during the period from 1883 to 1975.
 
 The workflow of the technique implementation is presented in the following image :
 ![image](https://github.com/giangpen/B.S.E.I./assets/92431494/e8a18d62-abf2-462b-8a5b-aee53fe0e157)
